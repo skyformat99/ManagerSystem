@@ -12,6 +12,12 @@ manager::manager(QWidget *parent) :
     QTimer* timer = new QTimer(this);//用于时间显示
     connect(timer, SIGNAL(timeout()), this, SLOT(tim_slot()));
     timer->start(1000);
+
+    //为菜单栏的Action设置响应函数，可以将该Action的Triggered()信号与想要的槽函数相连。
+    connect(ui->aboutAction, SIGNAL(triggered()), this, SLOT(showAbout()));
+    connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
+    connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
+    connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
 }
 
 manager::~manager()
@@ -46,4 +52,24 @@ void manager::on_clock_inBtn_clicked()
 void manager::on_departBtn_clicked()
 {
     d.show();
+}
+
+void manager::showAbout()
+{
+    ab.show();
+}
+
+void manager::showHelp()
+{
+    h.show();
+}
+
+void manager::showAlter()
+{
+    ap.show();
+}
+
+void manager::showLogout()
+{
+    l.show();
 }

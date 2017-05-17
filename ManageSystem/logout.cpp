@@ -17,3 +17,8 @@ void logout::on_cancleBtn_clicked()
 {
     accept();
 }
+
+void logout::on_okBtn_clicked()
+{
+    exit(0);
+}

@@ -11,6 +11,12 @@ checkIn::checkIn(QWidget *parent) :
     QTimer* timer = new QTimer(this);//用于时间显示
     connect(timer, SIGNAL(timeout()), this, SLOT(tim_slot()));
     timer->start(1000);
+
+    //为菜单栏的Action设置响应函数，可以将该Action的Triggered()信号与想要的槽函数相连。
+    connect(ui->aboutAction, SIGNAL(triggered()), this, SLOT(showAbout()));
+    connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
+    connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
+    connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
 }
 
 checkIn::~checkIn()
@@ -31,4 +37,24 @@ void checkIn::on_selectCheckInBtn_clicked()
 void checkIn::on_alterCheckInBtn_clicked()
 {
     a.show();
+}
+
+void checkIn::showAbout()
+{
+    ab.show();
+}
+
+void checkIn::showHelp()
+{
+    h.show();
+}
+
+void checkIn::showAlter()
+{
+    ap.show();
+}
+
+void checkIn::showLogout()
+{
+    l.show();
 }

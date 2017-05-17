@@ -122,14 +122,9 @@
     <addaction name="aboutAction"/>
     <addaction name="helpAction"/>
     <addaction name="alterAction"/>
-   </widget>
-   <widget class="QMenu" name="logoutMenu">
-    <property name="title">
-     <string>注销</string>
-    </property>
+    <addaction name="logoutAction"/>
    </widget>
    <addaction name="menu"/>
-   <addaction name="logoutMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="aboutAction">
@@ -145,6 +140,11 @@
   <action name="alterAction">
    <property name="text">
     <string>修改密码</string>
+   </property>
+  </action>
+  <action name="logoutAction">
+   <property name="text">
+    <string>注销登录</string>
    </property>
   </action>
  </widget>

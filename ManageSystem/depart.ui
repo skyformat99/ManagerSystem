@@ -120,16 +120,11 @@
      <string>系统设置</string>
     </property>
     <addaction name="aboutAction"/>
-    <addaction name="helpAaction"/>
+    <addaction name="helpAction"/>
     <addaction name="alterAction"/>
-   </widget>
-   <widget class="QMenu" name="menu_2">
-    <property name="title">
-     <string>注销</string>
-    </property>
+    <addaction name="logoutAction"/>
    </widget>
    <addaction name="menu"/>
-   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="aboutAction">
@@ -137,7 +132,7 @@
     <string>关于软件</string>
    </property>
   </action>
-  <action name="helpAaction">
+  <action name="helpAction">
    <property name="text">
     <string>帮助信息</string>
    </property>
@@ -145,6 +140,11 @@
   <action name="alterAction">
    <property name="text">
     <string>修改密码</string>
+   </property>
+  </action>
+  <action name="logoutAction">
+   <property name="text">
+    <string>注销登录</string>
    </property>
   </action>
  </widget>

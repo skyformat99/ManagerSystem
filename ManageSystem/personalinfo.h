@@ -6,6 +6,10 @@
 #include "alter.h"
 #include "add.h"
 #include "deletepersonal.h"
+#include "about.h"
+#include "help.h"
+#include "alterpassword.h"
+#include "logout.h"
 
 namespace Ui {
 class personalInfo;
@@ -31,12 +35,24 @@ private slots:
 
    void on_deleteInfoBtn_clicked();
 
+   void showAbout();
+
+   void showHelp();
+
+   void showAlter();
+
+   void showLogout();
+
 private:
     Ui::personalInfo *ui;
     select s;
     alter al;
     add a;
     deletePersonal d;
+    about ab;
+    help h;
+    alterPassword ap;
+    logout l;
 };
 
 #endif // PERSONALINFO_H

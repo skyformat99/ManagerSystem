@@ -12,6 +12,12 @@ user::user(QWidget *parent) :
     QTimer* timer = new QTimer(this);//用于时间显示
     connect(timer, SIGNAL(timeout()), this, SLOT(tim_slot()));
     timer->start(1000);
+
+    //为菜单栏的Action设置响应函数，可以将该Action的Triggered()信号与想要的槽函数相连。
+    connect(ui->aboutAction, SIGNAL(triggered()), this, SLOT(showAbout()));
+    connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
+    connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
+    connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
 }
 
 user::~user()
@@ -37,4 +43,24 @@ void user::on_salaBtn_clicked()
 void user::on_clock_inBtn_clicked()
 {
     sc.show();
+}
+
+void user::showAbout()
+{
+    ab.show();
+}
+
+void user::showHelp()
+{
+    h.show();
+}
+
+void user::showAlter()
+{
+    ap.show();
+}
+
+void user::showLogout()
+{
+    l.show();
 }

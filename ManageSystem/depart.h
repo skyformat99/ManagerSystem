@@ -6,6 +6,10 @@
 #include "alterdepart.h"
 #include "adddepart.h"
 #include "deletedepart.h"
+#include "about.h"
+#include "help.h"
+#include "alterpassword.h"
+#include "logout.h"
 
 namespace Ui {
 class depart;
@@ -31,12 +35,24 @@ private slots:
 
    void on_deleteDepartBtn_clicked();
 
+   void showAbout();
+
+   void showHelp();
+
+   void showAlter();
+
+   void showLogout();
+
 private:
     Ui::depart *ui;
     selectDepart s;
     alterDepart al;
     addDepart a;
     deleteDepart d;
+    about ab;
+    help h;
+    alterPassword ap;
+    logout l;
 };
 
 #endif // DEPART_H

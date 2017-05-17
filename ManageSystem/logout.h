@@ -18,6 +18,8 @@ public:
 private slots:
     void on_cancleBtn_clicked();
 
+    void on_okBtn_clicked();
+
 private:
     Ui::logout *ui;
 };

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QApplication>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -36,5 +37,5 @@ void MainWindow::on_registerBtm_clicked()
 
 void MainWindow::on_exitBtn_clicked()
 {
-    ;
+    QApplication::exit();
 }

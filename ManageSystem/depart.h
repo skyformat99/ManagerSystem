@@ -1,4 +1,4 @@
-#ifndef DEPART_H
+﻿#ifndef DEPART_H
 #define DEPART_H
 
 #include <QMainWindow>
@@ -10,6 +10,8 @@
 #include "help.h"
 #include "alterpassword.h"
 #include "logout.h"
+#include "selectme.h"
+#include "alterme.h"
 
 namespace Ui {
 class depart;
@@ -43,6 +45,10 @@ private slots:
 
    void showLogout();
 
+   void showSelf();
+
+   void alterSelf();
+
 private:
     Ui::depart *ui;
     selectDepart s;
@@ -53,6 +59,8 @@ private:
     help h;
     alterPassword ap;
     logout l;
+    selectMe sm;
+    alterMe am;
 };
 
 #endif // DEPART_H

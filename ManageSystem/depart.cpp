@@ -1,4 +1,4 @@
-#include "depart.h"
+﻿#include "depart.h"
 #include "ui_depart.h"
 #include "QDateTime"
 #include <qtimer.h>
@@ -17,6 +17,9 @@ depart::depart(QWidget *parent) :
     connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
     connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
     connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
+
+    connect(ui->selectAction, SIGNAL(triggered()), this, SLOT(showSelf()));
+    connect(ui->alterAction_2, SIGNAL(triggered()), this, SLOT(alterSelf()));
 }
 
 depart::~depart()
@@ -67,4 +70,14 @@ void depart::showAlter()
 void depart::showLogout()
 {
     l.show();
+}
+
+void depart::showSelf()
+{
+    sm.show();
+}
+
+void depart::alterSelf()
+{
+    am.show();
 }

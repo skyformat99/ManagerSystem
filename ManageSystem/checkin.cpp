@@ -1,4 +1,4 @@
-#include "checkin.h"
+﻿#include "checkin.h"
 #include "ui_checkin.h"
 #include "QDateTime"
 #include <qtimer.h>
@@ -17,6 +17,9 @@ checkIn::checkIn(QWidget *parent) :
     connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
     connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
     connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
+
+    connect(ui->selectAction, SIGNAL(triggered()), this, SLOT(showSelf()));
+    connect(ui->alterAction_2, SIGNAL(triggered()), this, SLOT(alterSelf()));
 }
 
 checkIn::~checkIn()
@@ -57,4 +60,14 @@ void checkIn::showAlter()
 void checkIn::showLogout()
 {
     l.show();
+}
+
+void checkIn::showSelf()
+{
+    sm.show();
+}
+
+void checkIn::alterSelf()
+{
+    am.show();
 }

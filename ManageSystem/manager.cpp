@@ -1,4 +1,4 @@
-#include "manager.h"
+﻿#include "manager.h"
 #include "ui_manager.h"
 #include "QDateTime"
 #include <qtimer.h>
@@ -18,6 +18,9 @@ manager::manager(QWidget *parent) :
     connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
     connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
     connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
+
+    connect(ui->selectAction, SIGNAL(triggered()), this, SLOT(showSelf()));
+    connect(ui->alterAction_2, SIGNAL(triggered()), this, SLOT(alterSelf()));
 }
 
 manager::~manager()
@@ -72,4 +75,14 @@ void manager::showAlter()
 void manager::showLogout()
 {
     l.show();
+}
+
+void manager::showSelf()
+{
+    sm.show();
+}
+
+void manager::alterSelf()
+{
+    am.show();
 }

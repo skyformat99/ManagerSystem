@@ -1,4 +1,4 @@
-#include "salary.h"
+﻿#include "salary.h"
 #include "ui_salary.h"
 #include "QDateTime"
 #include <qtimer.h>
@@ -17,6 +17,9 @@ salary::salary(QWidget *parent) :
     connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
     connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
     connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
+
+    connect(ui->selectAction, SIGNAL(triggered()), this, SLOT(showSelf()));
+    connect(ui->alterAction_2, SIGNAL(triggered()), this, SLOT(alterSelf()));
 }
 
 salary::~salary()
@@ -57,4 +60,14 @@ void salary::showAlter()
 void salary::showLogout()
 {
     l.show();
+}
+
+void salary::showSelf()
+{
+    sm.show();
+}
+
+void salary::alterSelf()
+{
+    am.show();
 }

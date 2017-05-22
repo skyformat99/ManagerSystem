@@ -1,4 +1,4 @@
-#include "enroll.h"
+﻿#include "enroll.h"
 #include "ui_enroll.h"
 #include <QMessageBox>
 
@@ -16,7 +16,7 @@ enroll::~enroll()
 
 void enroll::on_registerBtn_clicked()
 {
-    QMessageBox::information(this, "提示", "注册成功", QMessageBox::Yes);
+    QMessageBox::information(this, QString::fromLocal8Bit("提示"), QString::fromLocal8Bit("注册成功"), QMessageBox::Yes);
 }
 void enroll::on_cancleBtn_clicked()
 {

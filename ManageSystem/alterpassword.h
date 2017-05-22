@@ -1,7 +1,10 @@
-#ifndef ALTERPASSWORD_H
+﻿#ifndef ALTERPASSWORD_H
 #define ALTERPASSWORD_H
 
 #include <QDialog>
+#include <QMessageBox>
+#include <QSqlTableModel>
+#include <QSqlRecord>
 
 namespace Ui {
 class alterPassword;
@@ -18,8 +21,11 @@ public:
 private slots:
     void on_cancelBtn_clicked();
 
+    void on_okBtn_clicked();
+
 private:
     Ui::alterPassword *ui;
+    QSqlTableModel *model;
 };
 
 #endif // ALTERPASSWORD_H

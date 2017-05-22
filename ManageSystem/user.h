@@ -1,4 +1,4 @@
-#ifndef USER_H
+﻿#ifndef USER_H
 #define USER_H
 
 #include <QMainWindow>
@@ -8,6 +8,8 @@
 #include "help.h"
 #include "alterpassword.h"
 #include "logout.h"
+#include "selectme.h"
+#include "alterme.h"
 
 namespace Ui {
 class user;
@@ -39,6 +41,10 @@ private slots:
 
    void showLogout();
 
+   void showSelf();
+
+   void alterSelf();
+
 private:
     Ui::user *ui;
     select s;
@@ -47,6 +53,8 @@ private:
     help h;
     alterPassword ap;
     logout l;
+    selectMe sm;
+    alterMe am;
 };
 
 #endif // USER_H

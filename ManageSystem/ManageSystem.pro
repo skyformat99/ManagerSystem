@@ -34,7 +34,10 @@ SOURCES += main.cpp\
     personalinfo.cpp \
     salary.cpp \
     checkin.cpp \
-    depart.cpp
+    depart.cpp \
+    about.cpp \
+    selectme.cpp \
+    alterme.cpp
 
 HEADERS  += mainwindow.h \
     user.h \
@@ -58,7 +61,8 @@ HEADERS  += mainwindow.h \
     salary.h \
     checkin.h \
     depart.h \
-    conn.h
+    selectme.h \
+    alterme.h
 
 FORMS    += mainwindow.ui \
     user.ui \
@@ -81,4 +85,6 @@ FORMS    += mainwindow.ui \
     personalinfo.ui \
     salary.ui \
     checkin.ui \
-    depart.ui
+    depart.ui \
+    selectme.ui \
+    alterme.ui

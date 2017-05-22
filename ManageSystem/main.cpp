@@ -1,14 +1,28 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include <QApplication>
-#include "conn.h"
+#include <QSqlDatabase>
+#include <QMessageBox>
 
 int main(int argc, char *argv[])
-{
-    connectiondatabes();
-
+{   
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
-    return a.exec();
+    static int isManager = 1;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("localhost");
+    db.setDatabaseName("ManagerSystem");
+    db.setUserName("root");
+    db.setPassword("llll");
+    if(db.open())
+    {
+        MainWindow w;
+        w.show();
+        return a.exec();
+    }
+    else
+    {
+        QMessageBox::information(NULL,QString::fromLocal8Bit("提示"),QString::fromLocal8Bit("系统载入数据库失败，无法运行"),QMessageBox::Yes);
+    }
+
+    return 0;
 }

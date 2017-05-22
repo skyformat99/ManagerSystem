@@ -1,4 +1,4 @@
-#ifndef SALARY_H
+﻿#ifndef SALARY_H
 #define SALARY_H
 
 #include <QMainWindow>
@@ -8,6 +8,8 @@
 #include "help.h"
 #include "alterpassword.h"
 #include "logout.h"
+#include "selectme.h"
+#include "alterme.h"
 
 namespace Ui {
 class salary;
@@ -37,6 +39,10 @@ private slots:
 
    void showLogout();
 
+   void showSelf();
+
+   void alterSelf();
+
 private:
     Ui::salary *ui;
     select s;
@@ -45,6 +51,8 @@ private:
     help h;
     alterPassword ap;
     logout l;
+    selectMe sm;
+    alterMe am;
 };
 
 #endif // SALARY_H

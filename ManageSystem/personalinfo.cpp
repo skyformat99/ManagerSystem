@@ -1,4 +1,4 @@
-#include "personalinfo.h"
+﻿#include "personalinfo.h"
 #include "ui_personalinfo.h"
 #include "QDateTime"
 #include <qtimer.h>
@@ -17,6 +17,9 @@ personalInfo::personalInfo(QWidget *parent) :
     connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
     connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
     connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
+
+    connect(ui->selectAction, SIGNAL(triggered()), this, SLOT(showSelf()));
+    connect(ui->alterAction_2, SIGNAL(triggered()), this, SLOT(alterSelf()));
 }
 
 personalInfo::~personalInfo()
@@ -67,4 +70,14 @@ void personalInfo::showAlter()
 void personalInfo::showLogout()
 {
     l.show();
+}
+
+void personalInfo::showSelf()
+{
+    sm.show();
+}
+
+void personalInfo::alterSelf()
+{
+    am.show();
 }

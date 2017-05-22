@@ -115,7 +115,7 @@
      <height>23</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="systemMenu">
     <property name="title">
      <string>系统设置</string>
     </property>
@@ -124,7 +124,15 @@
     <addaction name="alterAction"/>
     <addaction name="logoutAction"/>
    </widget>
-   <addaction name="menu"/>
+   <widget class="QMenu" name="personMenu">
+    <property name="title">
+     <string>个人信息</string>
+    </property>
+    <addaction name="selectAction"/>
+    <addaction name="alterAction_2"/>
+   </widget>
+   <addaction name="systemMenu"/>
+   <addaction name="personMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="aboutAction">
@@ -145,6 +153,16 @@
   <action name="logoutAction">
    <property name="text">
     <string>注销登录</string>
+   </property>
+  </action>
+  <action name="selectAction">
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </action>
+  <action name="alterAction_2">
+   <property name="text">
+    <string>修改</string>
    </property>
   </action>
  </widget>

@@ -1,10 +1,13 @@
-#ifndef MAINWINDOW_H
+﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
 #include "manager.h"
 #include "user.h"
 #include "enroll.h"
+#include <QMessageBox>
+#include <QSqlTableModel>
+#include <QSqlRecord>
 
 namespace Ui {
 class MainWindow;
@@ -19,17 +22,21 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_loginBtm_clicked();
+    void on_CommRaBt_clicked();
 
-    void on_registerBtm_clicked();
+    void on_ManaRaBt_clicked();
 
-    void on_exitBtn_clicked();
+    void on_loginBtn_clicked();
+
+    void on_exitBtm_clicked();
 
 private:
     Ui::MainWindow *ui;
     manager m;
     user u;
     enroll e;
+    QSqlTableModel *model;
+    QSqlTableModel *model1;
 };
 
 #endif // MAINWINDOW_H

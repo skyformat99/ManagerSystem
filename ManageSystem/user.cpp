@@ -1,4 +1,4 @@
-#include "user.h"
+﻿#include "user.h"
 #include "ui_user.h"
 #include"QDateTime"
 #include <qtimer.h>
@@ -18,6 +18,9 @@ user::user(QWidget *parent) :
     connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(showHelp()));
     connect(ui->alterAction, SIGNAL(triggered()), this, SLOT(showAlter()));
     connect(ui->logoutAction, SIGNAL(triggered()), this, SLOT(showLogout()));
+
+    connect(ui->selectAction, SIGNAL(triggered()), this, SLOT(showSelf()));
+    connect(ui->alterAction_2, SIGNAL(triggered()), this, SLOT(alterSelf()));
 }
 
 user::~user()
@@ -63,4 +66,14 @@ void user::showAlter()
 void user::showLogout()
 {
     l.show();
+}
+
+void user::showSelf()
+{
+    sm.show();
+}
+
+void user::alterSelf()
+{
+    am.show();
 }

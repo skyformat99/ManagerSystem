@@ -1,4 +1,4 @@
-#ifndef PERSONALINFO_H
+﻿#ifndef PERSONALINFO_H
 #define PERSONALINFO_H
 
 #include <QMainWindow>
@@ -10,6 +10,8 @@
 #include "help.h"
 #include "alterpassword.h"
 #include "logout.h"
+#include "selectme.h"
+#include "alterme.h"
 
 namespace Ui {
 class personalInfo;
@@ -43,6 +45,10 @@ private slots:
 
    void showLogout();
 
+   void showSelf();
+
+   void alterSelf();
+
 private:
     Ui::personalInfo *ui;
     select s;
@@ -53,6 +59,8 @@ private:
     help h;
     alterPassword ap;
     logout l;
+    selectMe sm;
+    alterMe am;
 };
 
 #endif // PERSONALINFO_H

@@ -4,7 +4,6 @@
 #include <QDialog>
 #include <QMessageBox>
 #include <QSqlTableModel>
-#include <QSqlRecord>
 
 namespace Ui {
 class select;

@@ -64,10 +64,12 @@ void salary::showLogout()
 
 void salary::showSelf()
 {
+    sm.showInfo();
     sm.show();
 }
 
 void salary::alterSelf()
 {
+    am.showInfo();
     am.show();
 }

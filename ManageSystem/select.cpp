@@ -46,7 +46,6 @@ void select::on_selectBtn_clicked()
         ui->connLineEdit->setText(model->data(model->index(i,2)).toString());
         ui->posiLineEdit->setText(model->data(model->index(i,3)).toString());
         ui->departLineEdit->setText(model->data(model->index(i,4)).toString());
-        ui->salaLineEdit->setText(model->data(model->index(i,5)).toString());
     }
     else
     {
@@ -65,5 +64,4 @@ void select::closeEvent(QCloseEvent* event)
     ui->connLineEdit->clear();
     ui->posiLineEdit->clear();
     ui->departLineEdit->clear();
-    ui->salaLineEdit->clear();
 }

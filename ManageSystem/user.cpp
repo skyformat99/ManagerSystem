@@ -70,10 +70,12 @@ void user::showLogout()
 
 void user::showSelf()
 {
+    sm.showInfo();
     sm.show();
 }
 
 void user::alterSelf()
 {
+    am.showInfo();
     am.show();
 }

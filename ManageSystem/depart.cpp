@@ -74,10 +74,12 @@ void depart::showLogout()
 
 void depart::showSelf()
 {
+    sm.showInfo();
     sm.show();
 }
 
 void depart::alterSelf()
 {
+    am.showInfo();
     am.show();
 }

@@ -37,7 +37,8 @@ SOURCES += main.cpp\
     depart.cpp \
     about.cpp \
     selectme.cpp \
-    alterme.cpp
+    alterme.cpp \
+    selectsalary.cpp
 
 HEADERS  += mainwindow.h \
     user.h \
@@ -62,7 +63,8 @@ HEADERS  += mainwindow.h \
     checkin.h \
     depart.h \
     selectme.h \
-    alterme.h
+    alterme.h \
+    selectsalary.h
 
 FORMS    += mainwindow.ui \
     user.ui \
@@ -87,4 +89,5 @@ FORMS    += mainwindow.ui \
     checkin.ui \
     depart.ui \
     selectme.ui \
-    alterme.ui
+    alterme.ui \
+    selectsalary.ui

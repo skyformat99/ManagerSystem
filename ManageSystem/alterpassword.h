@@ -4,7 +4,10 @@
 #include <QDialog>
 #include <QMessageBox>
 #include <QSqlTableModel>
-#include <QSqlRecord>
+#include <QString>
+
+extern int jobNum;
+extern QString nameStr;
 
 namespace Ui {
 class alterPassword;

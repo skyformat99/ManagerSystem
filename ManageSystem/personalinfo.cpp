@@ -74,10 +74,12 @@ void personalInfo::showLogout()
 
 void personalInfo::showSelf()
 {
+    sm.showInfo();
     sm.show();
 }
 
 void personalInfo::alterSelf()
 {
+    am.showInfo();
     am.show();
 }

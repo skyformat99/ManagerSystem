@@ -136,13 +136,29 @@ void add::on_okBtn_clicked()
         return;
     }
 
+    //若是出现同名情况，进行处理：在名字后面加上字符做以区分
+    QString str = ui->nameLineEdit->text();
+    model->setFilter(QObject::tr("name = '%1'").arg(str)); //根据姓名进行筛选
+    model->select();
+    int count = model->rowCount();
+
+    //重新使model关联整张表
+    model->setTable("personinfo");
     int rowNum = model->rowCount(); //获得表的行数
     //因为前面setJobNum已经进行了添加，所以这儿不用添加
     model->insertRow(rowNum); //添加一行
 
     //设置添加的对应信息
+    QChar c = 'a' + count - 1;
+    if(count == 0)
+    {
+        model->setData(model->index(rowNum,1),ui->nameLineEdit->text());
+    }
+    else
+    {
+        model->setData(model->index(rowNum,1),ui->nameLineEdit->text()+QString(c));
+    }
     model->setData(model->index(rowNum,0),ui->jobNumLineEdit->text().toInt());
-    model->setData(model->index(rowNum,1),ui->nameLineEdit->text());
     model->setData(model->index(rowNum,2),ui->connLineEdit->text());
     model->setData(model->index(rowNum,3),ui->posiLineEdit->text());
     model->setData(model->index(rowNum,4),ui->departLineEdit->text());
@@ -162,8 +178,16 @@ void add::on_okBtn_clicked()
 
     int rowNum1 = model1->rowCount(); //获得表的行数
     model1->insertRow(rowNum1); //添加一行
+
+    if(count == 0)
+    {
+        model1->setData(model1->index(rowNum1,1),ui->nameLineEdit->text());
+    }
+    else
+    {
+        model1->setData(model1->index(rowNum1,1),ui->nameLineEdit->text()+QString(c));
+    }
     model1->setData(model1->index(rowNum1,0),ui->jobNumLineEdit->text().toInt());
-    model1->setData(model1->index(rowNum1,1),ui->nameLineEdit->text());
     model1->setData(model1->index(rowNum1,2),"123456");
 
     if(ui->managerRB->isChecked())

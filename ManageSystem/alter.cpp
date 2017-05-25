@@ -1,4 +1,4 @@
-#include "alter.h"
+﻿#include "alter.h"
 #include "ui_alter.h"
 
 alter::alter(QWidget *parent) :

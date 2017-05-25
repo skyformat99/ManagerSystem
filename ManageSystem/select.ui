@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
+    <width>534</width>
     <height>253</height>
    </rect>
   </property>
@@ -44,7 +44,7 @@
     <rect>
      <x>10</x>
      <y>110</y>
-     <width>591</width>
+     <width>511</width>
      <height>111</height>
     </rect>
    </property>
@@ -177,32 +177,6 @@
       <x>410</x>
       <y>60</y>
       <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="salaLabel">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>30</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>薪资</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="salaLineEdit">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>60</y>
-      <width>71</width>
       <height>21</height>
      </rect>
     </property>

@@ -1,7 +1,8 @@
-#ifndef ALTER_H
+﻿#ifndef ALTER_H
 #define ALTER_H
 
 #include <QDialog>
+#include <QSqlTableModel>
 
 namespace Ui {
 class alter;
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::alter *ui;
+    QSqlTableModel *model;
 };
 
 #endif // ALTER_H

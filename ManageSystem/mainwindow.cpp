@@ -2,6 +2,10 @@
 #include "ui_mainwindow.h"
 #include <QApplication>
 
+//C++多个文件共享变量的方法：一个.cpp文件定义变量，使用一个.h文件加extern声明变量，其余想使用这些变量的文件包含该.h文件即可
+int jobNum = 0;
+QString nameStr = "";
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -16,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent) :
     model = new QSqlTableModel(this);
     model->setTable("user");
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);
-    model->removeColumns(3, 3);
 
     //在 Qt 中，默认的编码是 Unicode，我们书写的代码文件被强制转换为 utf8，但是，在简体中文版的 Windows 操作系统中，默认编码却是 GBK。
     //若想字符得以正常显示，则可以使用 QString::fromLocal8Bit 来将本地字符编码转换为 Unicode 形式的 QString。
@@ -48,9 +51,14 @@ void MainWindow::on_loginBtn_clicked()
         //员工工号和姓名都可作为登陆名
         if((model->data(model->index(i,0)) == ui->loginLineEdit->text().toInt()) || (model->data(model->index(i,1)).toString()==ui->loginLineEdit->text()))
         {
+            if(model->data(model->index(i,0)) == ui->loginLineEdit->text().toInt())
+                jobNum = ui->loginLineEdit->text().toInt();
+            else
+                nameStr = ui->loginLineEdit->text();
             break;
         }
     }
+
     if(i!=model->rowCount())
     {
         if(ui->ManaRaBt->isChecked())

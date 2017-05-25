@@ -64,10 +64,12 @@ void checkIn::showLogout()
 
 void checkIn::showSelf()
 {
+    sm.showInfo();
     sm.show();
 }
 
 void checkIn::alterSelf()
 {
+    am.showInfo();
     am.show();
 }

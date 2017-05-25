@@ -79,10 +79,13 @@ void manager::showLogout()
 
 void manager::showSelf()
 {
+    //显示界面前先设置控件的信息
+    sm.showInfo();
     sm.show();
 }
 
 void manager::alterSelf()
 {
+    am.showInfo();
     am.show();
 }

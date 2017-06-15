@@ -1,4 +1,4 @@
-#ifndef DELETEDEPART_H
+﻿#ifndef DELETEDEPART_H
 #define DELETEDEPART_H
 
 #include <QDialog>

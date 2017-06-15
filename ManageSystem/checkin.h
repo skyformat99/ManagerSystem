@@ -26,6 +26,8 @@ public:
     explicit checkIn(QWidget *parent = 0);
     ~checkIn();
 
+    void nowTime();
+
 private slots:
    void on_selectCheckInBtn_clicked();
 

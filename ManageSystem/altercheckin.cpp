@@ -1,4 +1,4 @@
-#include "altercheckin.h"
+﻿#include "altercheckin.h"
 #include "ui_altercheckin.h"
 
 alterCheckIn::alterCheckIn(QWidget *parent) :

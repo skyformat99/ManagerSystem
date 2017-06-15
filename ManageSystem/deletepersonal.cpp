@@ -1,4 +1,4 @@
-#include "deletepersonal.h"
+﻿#include "deletepersonal.h"
 #include "ui_deletepersonal.h"
 
 deletePersonal::deletePersonal(QWidget *parent) :

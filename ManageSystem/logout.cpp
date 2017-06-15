@@ -1,4 +1,4 @@
-#include "logout.h"
+﻿#include "logout.h"
 #include "ui_logout.h"
 
 logout::logout(QWidget *parent) :

@@ -1,4 +1,4 @@
-#ifndef ENROLL_H
+﻿#ifndef ENROLL_H
 #define ENROLL_H
 
 #include <QDialog>

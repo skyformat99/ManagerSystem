@@ -1,4 +1,4 @@
-#include "adddepart.h"
+﻿#include "adddepart.h"
 #include "ui_adddepart.h"
 
 addDepart::addDepart(QWidget *parent) :

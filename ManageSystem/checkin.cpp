@@ -27,9 +27,14 @@ checkIn::~checkIn()
     delete ui;
 }
 
-void checkIn::tim_slot()//时间显示
+void checkIn::nowTime()
 {
     ui->timeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
+}
+
+void checkIn::tim_slot()//时间显示
+{
+    ui->nowTimeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
 }
 
 void checkIn::on_selectCheckInBtn_clicked()

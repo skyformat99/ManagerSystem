@@ -22,6 +22,13 @@ select::~select()
 
 void select::on_selectBtn_clicked()
 {
+    //当查询一次，不返回时，想查询另一个人的信息，那么当输入员工号，点击查询后，先清空原来的查询信息，再显示本次的查询信息
+    ui->jobNumLineEdit->clear();
+    ui->nameLineEdit->clear();
+    ui->connLineEdit->clear();
+    ui->posiLineEdit->clear();
+    ui->departLineEdit->clear();
+
     if(ui->selectLineEdit->text().isEmpty())
     {
         QMessageBox::information(this,QString::fromLocal8Bit("提示"),QString::fromLocal8Bit("请输入员工工号"),QMessageBox::Yes);

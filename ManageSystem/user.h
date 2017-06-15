@@ -26,6 +26,8 @@ public:
     explicit user(QWidget *parent = 0);
     ~user();
 
+    void nowTime();
+
 private slots:
    void on_infoBtn_clicked();
 

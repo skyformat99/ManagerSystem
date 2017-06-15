@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>企业人事管理系统</string>
   </property>
-  <widget class="QLineEdit" name="searchLineText">
+  <widget class="QLineEdit" name="selectLineText">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -46,7 +46,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>搜索结果</string>
+    <string>查询结果</string>
    </property>
    <widget class="QLabel" name="amLabel">
     <property name="geometry">
@@ -151,7 +151,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>搜索</string>
+    <string>查询</string>
    </property>
   </widget>
  </widget>

@@ -7,24 +7,24 @@
     <x>0</x>
     <y>0</y>
     <width>448</width>
-    <height>253</height>
+    <height>258</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>企业人事管理系统</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="strLabel">
+   <widget class="QLabel" name="strNowTimeLabel">
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>160</y>
+      <y>180</y>
       <width>54</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>您登录于</string>
+     <string>当前时间</string>
     </property>
    </widget>
    <widget class="QPushButton" name="addInfoBtn">
@@ -40,11 +40,11 @@
      <string>添加员工信息</string>
     </property>
    </widget>
-   <widget class="QLabel" name="timeLabel">
+   <widget class="QLabel" name="nowTimeLabel">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>160</y>
+      <y>180</y>
       <width>171</width>
       <height>31</height>
      </rect>
@@ -103,6 +103,32 @@
     </property>
     <property name="text">
      <string>员工个人基本信息管理</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="strTimeLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>150</y>
+      <width>54</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>您登录于</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timeLabel">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>150</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>

@@ -1,4 +1,4 @@
-#ifndef ALTERDEPART_H
+﻿#ifndef ALTERDEPART_H
 #define ALTERDEPART_H
 
 #include <QDialog>

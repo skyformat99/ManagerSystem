@@ -1,4 +1,4 @@
-#ifndef SELECTCHECKIN_H
+﻿#ifndef SELECTCHECKIN_H
 #define SELECTCHECKIN_H
 
 #include <QDialog>

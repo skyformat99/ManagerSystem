@@ -28,6 +28,8 @@ public:
     explicit depart(QWidget *parent = 0);
     ~depart();
 
+    void nowTime();
+
 private slots:
    void on_selectDepartBtn_clicked();
 

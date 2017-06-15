@@ -1,4 +1,4 @@
-#ifndef ALTERCHECKIN_H
+﻿#ifndef ALTERCHECKIN_H
 #define ALTERCHECKIN_H
 
 #include <QDialog>

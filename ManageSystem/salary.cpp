@@ -27,9 +27,14 @@ salary::~salary()
     delete ui;
 }
 
-void salary::tim_slot()//时间显示
+void salary::nowTime()
 {
     ui->timeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
+}
+
+void salary::tim_slot()//时间显示
+{
+    ui->nowTimeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
 }
 
 void salary::on_selectSalaBtn_clicked()

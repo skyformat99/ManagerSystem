@@ -14,6 +14,8 @@ alterPassword::alterPassword(QWidget *parent) :
 
     ui->newLineEdit->setEchoMode(QLineEdit::Password);
     ui->affirmLineEdit->setEchoMode(QLineEdit::Password);
+    ui->newLineEdit->setPlaceholderText(QString::fromLocal8Bit("请输入新密码"));
+    ui->affirmLineEdit->setPlaceholderText(QString::fromLocal8Bit("请重复输入密码"));
 }
 
 alterPassword::~alterPassword()

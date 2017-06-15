@@ -26,6 +26,8 @@ public:
     explicit salary(QWidget *parent = 0);
     ~salary();
 
+    void nowTime();
+
 private slots:
    void on_selectSalaBtn_clicked();
 

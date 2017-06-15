@@ -27,9 +27,14 @@ personalInfo::~personalInfo()
     delete ui;
 }
 
-void personalInfo::tim_slot()//时间显示
+void personalInfo::nowTime()
 {
     ui->timeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
+}
+
+void personalInfo::tim_slot()//时间显示
+{
+    ui->nowTimeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
 }
 
 void personalInfo::on_selectInfoBtn_clicked()

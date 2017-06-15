@@ -28,9 +28,14 @@ user::~user()
     delete ui;
 }
 
-void user::tim_slot()//时间显示
+void user::nowTime()
 {
     ui->timeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
+}
+
+void user::tim_slot()//时间显示
+{
+    ui->nowTimeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
 }
 
 void user::on_infoBtn_clicked()

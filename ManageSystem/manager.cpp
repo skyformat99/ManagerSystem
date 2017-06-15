@@ -28,32 +28,41 @@ manager::~manager()
     delete ui;
 }
 
+void manager::nowTime()
+{
+     ui->timeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
+}
+
 void manager::tim_slot()//时间显示
 {
     //用lcdNumbe方式来显示时间
     //ui->lcdNumber->setDigitCount(28);
     //ui->lcdNumber->setSegmentStyle(QLCDNumber::Flat);
     //ui->lcdNumber->display((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
-    ui->timeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
+    ui->nowTimeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
 }
 
 void manager::on_infoBtn_clicked()
 {
+    p.nowTime();
     p.show();
 }
 
 void manager::on_salaBtn_clicked()
 {
+    s.nowTime();
     s.show();
 }
 
 void manager::on_clock_inBtn_clicked()
 {
+    c.nowTime();
     c.show();
 }
 
 void manager::on_departBtn_clicked()
 {
+    d.nowTime();
     d.show();
 }
 

@@ -27,9 +27,14 @@ depart::~depart()
     delete ui;
 }
 
-void depart::tim_slot()//时间显示
+void depart::nowTime()
 {
     ui->timeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
+}
+
+void depart::tim_slot()//时间显示
+{
+    ui->nowTimeLabel->setText((new QDateTime)->currentDateTime().toString("yyyy-MM-dd hh:mm:ss dddd"));
 }
 
 void depart::on_selectDepartBtn_clicked()

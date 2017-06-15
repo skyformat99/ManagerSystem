@@ -28,6 +28,8 @@ public:
     explicit personalInfo(QWidget *parent = 0);
     ~personalInfo();
 
+    void nowTime();
+
 private slots:
    void on_selectInfoBtn_clicked();
 

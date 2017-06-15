@@ -1,4 +1,4 @@
-#ifndef ADDDEPART_H
+﻿#ifndef ADDDEPART_H
 #define ADDDEPART_H
 
 #include <QDialog>

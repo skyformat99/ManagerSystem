@@ -1,4 +1,4 @@
-#ifndef SELECTDEPART_H
+﻿#ifndef SELECTDEPART_H
 #define SELECTDEPART_H
 
 #include <QDialog>

@@ -1,4 +1,4 @@
-#include "deletedepart.h"
+﻿#include "deletedepart.h"
 #include "ui_deletedepart.h"
 
 deleteDepart::deleteDepart(QWidget *parent) :

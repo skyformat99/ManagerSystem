@@ -28,6 +28,8 @@ public:
     explicit manager(QWidget *parent = 0);
     ~manager();
 
+    void nowTime();
+
 private slots:
    void on_infoBtn_clicked();
 

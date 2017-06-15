@@ -68,6 +68,7 @@ void MainWindow::on_loginBtn_clicked()
                 if(model->data(model->index(i,2)).toString() == ui->passwordLineEdit->text())
                 {
                     this->hide();
+                    m.nowTime();
                     m.show();
                 }
                 else
@@ -86,6 +87,7 @@ void MainWindow::on_loginBtn_clicked()
             {
                 //因为管理员和普通用户都可作为普通用户登陆，因此此处不加是否选中的用户类型符合的判断
                 this->hide();
+                u.nowTime();
                 u.show();
             }
             else

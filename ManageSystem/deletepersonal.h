@@ -1,4 +1,4 @@
-#ifndef DELETEPERSONAL_H
+﻿#ifndef DELETEPERSONAL_H
 #define DELETEPERSONAL_H
 
 #include <QDialog>
